@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html><!-- This is the begining of the main page that houses the necessary forms that are to be filled when 
+recording an Occurrence in the Occurrence Database system -->
+<title> Kenya Police Service </title>
+<link rel="stylesheet" href="css/main.css" /><!-- a link that links the HTML file with the CSS file -->
+<link rel="icon" href="images/icon.gif"/><!-- Icon of the page -->
+<body>
+<style>
+	body{
+		background-color:#0000e6;
+		
+	}
+	h2 a:hover{
+		color:#00ccff;
+	}
+	input:hover{
+		color:#00b300;
+	}
+</style>
+
+<div>
+<img src="images/logo.png"/><hr><!-- Police logo -->
+<h1><u><head> Traffic Department </head></u></h1><!-- Name of department -->
+</div>
+<center><img class="circle" src="images/cc1.gif"/></center><!-- A link redirecting back to the main page -->
+<hr>
+<br>
+<h1><u> Reporting An Occurrence </u></h1>
+
+
+<form action="sato.php" method="POST" /><!-- Beginning of the form -->
+<div class="ree-e"><h2><u>Reporter <br> </u><input type="text" placeholder=" Reporter" name="Reporter" required></div></h2>
+<div class="id"><h2><u>ID_number <br> </u><input type="number" placeholder="ID number" name="ID_number" required></div></h2>
+<div class="select"><h2><u>Date <br> </u><input type="Date" name="Date" min="2011-04-12" max="2018-04-16" required></div></h2>
+<div class="ree"><h2><u>Occurrence <br> </u><textarea rows="6" "colns="100" name="Occurrence" placeholder=" Enter Report here.." required>
+</textarea></h2></div>
+<br>
+<div class="sub">
+<input type="submit" value="Save" style="cursor:pointer;">
+<br>
+<input type="reset" value="Reset" style="cursor:pointer;">
+</div>
+</form><!-- This is the end of the form-->
+<br>
+<br>
+<h2><a href="logout.php"> LOG OUT </a></h2>
+</body>
+</html><!-- Ending of the page -->

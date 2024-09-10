@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><!-- Begining of the page -->
+<link rel="stylesheet" href="css/main.css" /><!-- a link that links the HTML file with the CSS file -->
+<link rel="icon" href="images/icon.gif"/><!-- Icon of the page -->
+<style>
+	body{
+		background-color:#0000e6;
+		color:#e6e6e6;
+	}
+	input:hover{
+		color:#00b300;
+	}
+</style>
+<title> Kenya Police Service</title>
+<body>
+<div>
+<img src="images/logo.png"/><hr><!-- Police logo -->
+<h1><u><head> Traffic Department </head></u></h1><!-- Name of department -->
+</div>
+<center><a href="mmainpage.html"><img class="circle" src="images/cc1.gif" /></center></a><!-- A link redirecting back to the main page -->
+<hr>
+<div><form action="ad.php" method="GET" onsubmit="return Validate()" name="oform"><!-- This is the login form that the OCS fills in order to login into the O.B system -->
+		<u><p> ADMIN ( OCS ) </p></u>
+		<input type="text" placeholder="Username" name="Username"><br><br>
+		<div id="name_error" class="val_error"></div>
+		<input type="password" placeholder="Password" name="Password"><br><br>
+		<div id="password_error" class="val_error"></div>
+		<b><input type="submit" value="LOGIN" class="textInput" name="submit" style="cursor:pointer;"></b> 
+		<b><input type="reset" value="RESET" class="textInput"  style="cursor:pointer;"></b>
+	</form></div><!-- Ending of the form -->
+	<br>
+	
+	<script type="text/JavaScript">
+
+//getting all input objects
+var Username = document.forms["oform"]["Username"];
+var Password = document.forms["oform"]["Password"];
+
+//getting all error objects
+var name_error = document.getElementById("name_error");
+var password_error= document.getElementById("password_error");
+
+//setting all event listeners
+Username.addEventListener("blur", UsernameVerify, true);
+Password.addEventListener("blur", PasswordVerify, true);
+
+//validate function
+function Validate(){
+	if (Username.value == ""){
+		Username.style.border = "solid red";
+		name_error.textContent = "Username is required";
+		Username.focus();
+		return false;
+	}
+	if (Password.value == ""){
+		Password.style.border = "solid red";
+		password_error.textContent = "Password is required";
+		Password.focus();
+		return false;
+	}
+	
+}
+
+//event handler functions
+function UsernameVerify(){
+	if(Username.value != ""){
+		Username.style.border = "1px solid red";
+		name_error.innerHTML = "";
+		return true;
+	}
+}
+
+function PasswordVerify(){
+	if(Password.value != ""){
+		Password.style.border = "1px solid red";
+		password_error.innerHTML = "";
+		return true;
+	}
+}
+</script>
+</body>
+</html><!-- Ending of the page -->

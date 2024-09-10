@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><!-- Begining of the page -->
+<link rel="stylesheet" href="css/main.css" /><!-- a link that links the HTML file with the CSS file -->
+<link rel="icon" href="images/icon.gif"/><!-- Icon of the page -->
+<style>
+	body{
+		background-color:#0000e6;
+		color:#e6e6e6;
+	}
+	input:hover{
+	color:#00b300;
+	}
+	
+</style>
+<title> Kenya Police Service</title>
+<body>
+<div>
+<img src="images/logo.png"/><hr><!-- Police logo -->
+<h1><u><head> Traffic Department </head></u></h1><!-- Name of department -->
+</div>
+<center><a href="OCS.php"><img class="circle" src="images/cc1.gif" /></center></a><!-- A link redirecting back to the main page -->
+<hr>
+
+<h1><u> Officer Removal </u></h1>
+<div class="delete">
+<form action="remove.php" method="GET" name="dform">
+<input type="text" name="ID" placeholder="Remove Officer" class="textInput" required>
+<br>
+<br>
+<input type="submit" name="delete" value="Remove" class="textInput" >
+<input type="reset" value="Reset" class="textInput" style="cursor:pointer;" >
+
+
+</body>
+</html>
